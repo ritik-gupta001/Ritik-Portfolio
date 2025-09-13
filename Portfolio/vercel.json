@@ -1,4 +1,15 @@
 {
+  "functions": {
+    "index.html": {
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*\\.(css|js|jpg|jpeg|png|gif|ico|svg|mp4|webm))",
