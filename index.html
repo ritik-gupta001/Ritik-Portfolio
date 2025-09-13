@@ -21,8 +21,8 @@
             --secondary: #14b8a6;
             --secondary-light: #5eead4;
             --secondary-dark: #0f766e;
-            --accent: #f59e0b;
-            --accent-light: #fbbf24;
+            --accent: #a855f7;
+            --accent-light: #c084fc;
             --success: #10b981;
             --warning: #f59e0b;
             --error: #ef4444;
@@ -465,6 +465,13 @@
             border: 2px solid var(--secondary);
         }
 
+        .btn-accent {
+            background: var(--accent);
+            color: var(--text-inverse);
+            border: 2px solid var(--accent);
+            box-shadow: var(--shadow-md);
+        }
+
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
@@ -473,6 +480,12 @@
         .btn-secondary:hover {
             background: var(--secondary);
             color: var(--text-inverse);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-accent:hover {
+            background: var(--accent-light);
+            transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
         }
 
@@ -903,6 +916,7 @@
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
+                font-weight: 800;
             }
             
             .nav-links {
@@ -915,6 +929,18 @@
             
             .section-title {
                 font-size: 2.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+            }
+            
+            .btn {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+                text-align: center;
             }
         }
 
@@ -1053,6 +1079,7 @@
                 </p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">View My Projects</a>
+                    <a href="Ritik_resume.pdf" class="btn btn-accent" download="Ritik_Kumar_Gupta_Resume.pdf">📥 Download Resume</a>
                     <a href="#contact" class="btn btn-secondary">Let's Connect</a>
                 </div>
             </div>
