@@ -1,8 +1,8 @@
 # 🚀 Ritik Kumar Gupta - AI/ML Engineer Portfolio
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-brightgreen)](https://your-portfolio-url.vercel.app)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-brightgreen)](https://your-portfolio-url.netlify.app)
 [![GitHub](https://img.shields.io/badge/GitHub-ritik--gupta001-blue)](https://github.com/ritik-gupta001)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/your-profile)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/ritik-kumar-gupta001)
 
 A modern, responsive portfolio website showcasing my expertise in Artificial Intelligence and Machine Learning. Built with clean HTML/CSS/JavaScript and featuring interactive project demonstrations.
 
@@ -22,21 +22,20 @@ A modern, responsive portfolio website showcasing my expertise in Artificial Int
 - **Fonts**: Google Fonts (Inter)
 - **Icons**: Unicode emojis and custom styling
 - **Animations**: CSS animations and transitions
-- **Deployment**: Vercel (recommended)
+- **Deployment**: Netlify with GitHub Integration
 
 ## 📁 Project Structure
 
 ```
 Portfolio/
-├── Template/
-│   ├── index.html                      # Main portfolio page
-│   ├── Ritik.jpg                       # Profile photo
-│   ├── Laptop-price-predictor.jpg      # Project thumbnail
-│   ├── laptop price predictor.mp4     # Project demo video
-│   ├── Medicine-recommender system.png # Project thumbnail
-│   ├── medicine-recommender system.mp4 # Project demo video
-│   ├── Movie-recommender-system.jpg    # Project thumbnail
-│   └── movie-recommender system.mp4    # Project demo video
+├── index.html                          # Main portfolio page
+├── Ritik.jpg                           # Profile photo
+├── Laptop-price-predictor.jpg          # Project thumbnail
+├── laptop price predictor.mp4          # Project demo video
+├── Medicine-recommender system.png     # Project thumbnail
+├── medicine-recommender system.mp4     # Project demo video
+├── Movie-recommender-system.jpg        # Project thumbnail
+├── movie-recommender system.mp4        # Project demo video
 └── README.md                           # This file
 ```
 
@@ -98,8 +97,8 @@ B.Tech - Artificial Intelligence And Machine Learning
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/ritik-gupta001/portfolio.git
-   cd portfolio/Template
+   git clone https://github.com/ritik-gupta001/Ritik-Portfolio.git
+   cd Ritik-Portfolio/Portfolio
    ```
 
 2. **Open in browser**
@@ -110,18 +109,25 @@ B.Tech - Artificial Intelligence And Machine Learning
    # Then visit http://localhost:8000
    ```
 
-### Deploy to Vercel
+### Deploy to Netlify with GitHub Integration
 
-1. **Install Vercel CLI** (optional)
-   ```bash
-   npm i -g vercel
-   ```
+1. **Connect to Netlify**
+   - Go to [netlify.com](https://netlify.com) and sign up/login
+   - Click "New site from Git"
+   - Choose "GitHub" and authorize Netlify to access your repositories
 
-2. **Deploy**
-   - Fork this repository
-   - Connect your GitHub account to Vercel
-   - Import the project
-   - Deploy automatically with every push to main branch
+2. **Configure Deployment**
+   - Select your `Ritik-Portfolio` repository
+   - Set deployment settings:
+     - **Base directory**: `Portfolio`
+     - **Publish directory**: `Portfolio` (or leave empty)
+     - **Build command**: Leave empty (static HTML site)
+
+3. **Deploy & Auto-Update**
+   - Click "Deploy site"
+   - Your site will be live instantly
+   - Every push to GitHub automatically redeploys your site
+   - Get a custom `.netlify.app` domain (can be customized)
 
 ## 📱 Responsive Design
 
@@ -147,10 +153,10 @@ The portfolio uses CSS custom properties for easy theming:
 ```
 
 ### Adding New Projects
-1. Add project images to the Template folder
+1. Add project images/videos to the Portfolio folder
 2. Update the projects section in `index.html`
-3. Include demo videos if available
-4. Update the README with new project details
+3. Include demo videos for better presentation
+4. Update this README with new project details
 
 ## 🔧 Browser Support
 
@@ -162,10 +168,10 @@ The portfolio uses CSS custom properties for easy theming:
 
 ## 📊 Performance
 
-- **Lighthouse Score**: 95+ (Performance, SEO, Accessibility)
-- **Load Time**: < 2 seconds
-- **Image Optimization**: Compressed images for faster loading
-- **CSS Optimization**: Minified and optimized styles
+- **Lighthouse Score**: 95+ (Performance, SEO, Accessibility)  
+- **Load Time**: < 2 seconds  
+- **Netlify Deployment**: Instant global CDN distribution  
+- **Auto HTTPS**: Secure SSL certificates included
 
 ## 🤝 Contributing
 
@@ -186,9 +192,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Ritik Kumar Gupta**  
 AI & Machine Learning Engineer
 
-- 🌐 Portfolio: [Live Demo](https://your-portfolio-url.vercel.app)
-- 💼 LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
-- 📧 Email: your.email@example.com
+- 🌐 Portfolio: [Live Demo](https://ritik-portfolio.netlify.app) <!-- Update with your actual Netlify URL -->
+- 💼 LinkedIn: [Ritik Kumar Gupta](https://linkedin.com/in/ritik-kumar-gupta001)
+- 📧 Email: ritikgupta.ai@gmail.com <!-- Update with your actual email -->
 - 🐱 GitHub: [@ritik-gupta001](https://github.com/ritik-gupta001)
 
 ## 🙏 Acknowledgments
