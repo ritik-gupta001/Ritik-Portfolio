@@ -1251,7 +1251,7 @@
             <div class="projects-grid">
                 <div class="project-card fade-in stagger-1">
                     <div class="project-image">
-                        <img src="Medisure AI.png" alt="MediSure AI Project" />
+                        <img class="theme-image" data-dark="medisure dark.png" data-light="medisure light.png" src="medisure dark.png" alt="MediSure AI Project" />
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">MediSure AI</h3>
@@ -1269,7 +1269,7 @@
                             <span class="tech-tag">PyPDF2</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/ritik-gupta001/MediSure-AI" class="project-link">🔗 GitHub</a>
+                            <a href="https://github.com/ritik-gupta001/Medisure.AI" class="project-link" target="_blank">🔗 GitHub</a>
                             <a href="#" class="project-link">🚀 Live Demo</a>
                         </div>
                     </div>
@@ -1277,7 +1277,7 @@
 
                 <div class="project-card fade-in stagger-2">
                     <div class="project-image">
-                        <img src="youtube summary generator.png" alt="YouTube Video Summarizer Project" />
+                        <img class="theme-image" data-dark="youtube dark.png" data-light="youtube light.png" src="youtube dark.png" alt="YouTube Video Summarizer Project" />
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">YouTube Video Summarizer</h3>
@@ -1295,15 +1295,15 @@
                             <span class="tech-tag">Git</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/ritik-gupta001/YouTube-Summary-Generator" class="project-link">🔗 GitHub</a>
-                            <a href="#" class="project-link">🚀 Live Demo</a>
+                            <a href="https://github.com/ritik-gupta001/Youtube-Video-Summary-Generator" class="project-link" target="_blank">🔗 GitHub</a>
+                            <a href="https://youtubevideosummarygenerator.netlify.app/" class="project-link" target="_blank">🚀 Live Demo</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card fade-in stagger-3">
                     <div class="project-image">
-                        <img src="Edublink.png" alt="EduBlink Project" />
+                        <img class="theme-image" data-dark="edublink dark.png" data-light="edublink light.png" src="edublink dark.png" alt="EduBlink Project" />
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">EduBlink - Smart Tools for Smart Teaching</h3>
@@ -1320,6 +1320,34 @@
                         <div class="project-links">
                             <a href="https://github.com/ritik-gupta001/EduBlink-Smart-Tools-for-Smart-Teaching." class="project-link" target="_blank">🔗 GitHub</a>
                             <a href="https://edublink.onrender.com" class="project-link" target="_blank">🚀 Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in stagger-4">
+                    <div class="project-image">
+                        <img class="theme-image" data-dark="nexanalyze dark.png" data-light="nexanalyze light.png" src="nexanalyze dark.png" alt="NexAnalyze AI Project" />
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">NexAnalyze AI - Transform Data into Insights</h3>
+                        <p class="project-description">
+                            NexAnalyze AI is a cutting-edge research and automation platform that combines the power of Large Language Models (LLMs), Machine Learning, and advanced data processing to deliver intelligent insights. An autonomous multi-agent AI platform for intelligent research, data analysis, and automated insights generation.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenAI GPT</span>
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">scikit-learn</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">SQLAlchemy</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ritik-gupta001/NexanalyzeAI--Transform-Data-Into-Insights" class="project-link" target="_blank">🔗 GitHub</a>
+                            <a href="https://possible-kessiah-ritikworkshop-f00d1514.koyeb.app/" class="project-link" target="_blank">🚀 Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -1479,6 +1507,7 @@
             const savedTheme = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', savedTheme);
             updateNavScrollBehavior();
+            updateProjectImages(savedTheme);
         }
 
         function toggleTheme() {
@@ -1488,6 +1517,16 @@
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateNavScrollBehavior();
+            updateProjectImages(newTheme);
+        }
+
+        function updateProjectImages(theme) {
+            const images = document.querySelectorAll('.theme-image');
+            images.forEach(img => {
+                const darkSrc = img.getAttribute('data-dark');
+                const lightSrc = img.getAttribute('data-light');
+                img.src = theme === 'dark' ? darkSrc : lightSrc;
+            });
         }
 
         function updateNavScrollBehavior() {
