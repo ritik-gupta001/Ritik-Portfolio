@@ -1637,29 +1637,31 @@
                     </a>
                 </div>
 
-                <!-- Interactive Contact Form -->
-                <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+                <!-- Interactive Contact Form with Netlify Forms + FormSubmit Fallback -->
+                <form class="contact-form" id="contactForm" action="https://formsubmit.co/ritikgupta78560@gmail.com" method="POST" data-netlify="true" name="contact" onsubmit="handleFormSubmit(event)">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://ritik0001.netlify.app/?success=true#contact">
+                    <input type="hidden" name="_template" value="table">
+                    
                     <div class="form-group">
                         <label for="nameInput">Your Name</label>
-                        <input type="text" id="nameInput" class="form-control" placeholder="e.g. Hiring Manager"
+                        <input type="text" name="name" id="nameInput" class="form-control" placeholder="e.g. Hiring Manager"
                             required>
                     </div>
                     <div class="form-group">
                         <label for="emailInput">Your Email</label>
-                        <input type="email" id="emailInput" class="form-control" placeholder="hiring@company.com"
+                        <input type="email" name="email" id="emailInput" class="form-control" placeholder="hiring@company.com"
                             required>
                     </div>
                     <div class="form-group">
                         <label for="messageInput">Message</label>
-                        <textarea id="messageInput" class="form-control"
+                        <textarea name="message" id="messageInput" class="form-control"
                             placeholder="Let's connect regarding AI engineering opportunities..." required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
                         <i class="fa-solid fa-paper-plane"></i> Send Message
                     </button>
-                    <div class="form-status" id="formStatus">
-                        ✓ Message sent! I'll get back to you shortly.
-                    </div>
+                    <div class="form-status" id="formStatus"></div>
                 </form>
             </div>
         </div>
@@ -1688,10 +1690,11 @@
             details.classList.toggle('open');
         }
 
-        // Contact Form Submission Handler via FormSubmit API
+        // Contact Form Submission Handler
         async function handleFormSubmit(e) {
             e.preventDefault();
-            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
             const status = document.getElementById('formStatus');
 
             const name = document.getElementById('nameInput').value.trim();
@@ -1718,23 +1721,21 @@
                     })
                 });
 
-                if (response.ok) {
+                const data = await response.json();
+
+                if (response.ok && data.success === "true") {
                     status.className = 'form-status success';
                     status.innerHTML = '✓ Message sent successfully! I will get back to you shortly.';
-                    document.getElementById('contactForm').reset();
+                    form.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
                 } else {
-                    status.className = 'form-status error';
-                    status.innerHTML = '✕ Could not send automatically. Please email directly to <a href="mailto:ritikgupta78560@gmail.com" style="color: inherit; text-decoration: underline;">ritikgupta78560@gmail.com</a>';
+                    // Fallback to direct HTML form submission
+                    form.submit();
                 }
             } catch (err) {
-                status.className = 'form-status error';
-                status.innerHTML = '✕ Could not send automatically. Please email directly to <a href="mailto:ritikgupta78560@gmail.com" style="color: inherit; text-decoration: underline;">ritikgupta78560@gmail.com</a>';
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
-                setTimeout(() => {
-                    status.className = 'form-status';
-                }, 8000);
+                // Fallback to direct HTML form submission
+                form.submit();
             }
         }
 
@@ -1761,13 +1762,14 @@
                     }
                 });
 
-                navItems.forEach(item => {
-                    item.classList.remove('active');
-                    if (item.getAttribute('href') === `#${current}`) {
-                        item.classList.add('active');
-                    }
-                });
-            });
+            // Check success query string on return from submission
+            if (window.location.search.includes('success=true')) {
+                const status = document.getElementById('formStatus');
+                if (status) {
+                    status.className = 'form-status success';
+                    status.innerHTML = '✓ Message sent successfully! I will get back to you shortly.';
+                }
+            }
         });
     </script>
 </body>
