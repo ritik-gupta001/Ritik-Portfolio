@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritik Kumar Gupta | AI Engineer - Generative AI, LLMs & Agentic Systems</title>
+    <title>Ritik Kumar Gupta | AI Engineer</title>
     <meta name="description"
-        content="Portfolio of Ritik Kumar Gupta - AI Engineer specializing in Generative AI, LLM Systems, LangGraph Multi-Agent Orchestration, RAG Pipelines, and FastAPI.">
+        content="Portfolio of Ritik Kumar Gupta - AI Engineer specializing in Generative AI, LLM Systems, LangGraph Multi-Agent Workflows, RAG Pipelines, and FastAPI.">
     <meta name="keywords"
         content="Ritik Kumar Gupta, AI Engineer, Generative AI, LangGraph, LangChain, RAG, FastAPI, PyTorch, Multi-Agent AI">
 
@@ -20,61 +20,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            /* Premium AI Engineering / Modern SaaS Color System */
-            --bg-primary: #080B14;
-            /* 70% Deep Navy */
-            --bg-secondary: #0D1220;
-            /* Section / Background Variation */
-            --bg-card: #111827;
-            /* 20% Card / Surface */
-            --bg-card-hover: #162032;
-            /* Hover surface */
-            --bg-glass-heavy: rgba(8, 11, 20, 0.85);
-
-            /* Text Tokens */
-            --text-primary: #F8FAFC;
-            /* Headings & Important Content */
-            --text-secondary: #94A3B8;
-            /* Descriptions & Metadata */
-            --text-muted: #64748B;
-            /* Captions & Dates */
-
-            /* Accent Tokens (8% Blue, 2% Cyan) */
-            --accent-primary: #3B82F6;
-            /* 8% Primary Interactive Blue */
-            --accent-primary-hover: #2563EB;
-            /* Hover state blue */
-            --accent-secondary: #22D3EE;
-            /* 2% Subtle AI / Tech Cyan */
-            --accent-success: #34D399;
-            /* Live Status Indicator */
-
-            /* Border Token */
-            --border-color: #1E293B;
-            /* Cards, Dividers, Inputs */
+            /* Dark Theme Tokens (Default) */
+            --bg-primary: #090D16;
+            --bg-secondary: #111622;
+            --bg-card: #151C2C;
+            --bg-card-hover: #1C263B;
+            --bg-dock: rgba(21, 28, 44, 0.82);
+            --border-color: #202A3E;
             --border-hover: #3B82F6;
-            /* Subtle hover border */
 
-            /* Subtle Gradients */
-            --gradient-accent: linear-gradient(135deg, #3B82F6 0%, #22D3EE 100%);
-            --gradient-bg-radial: radial-gradient(circle at 50% -20%, rgba(59, 130, 246, 0.12) 0%, rgba(8, 11, 20, 0) 70%);
+            --text-primary: #F9FAFB;
+            --text-secondary: #9CA3AF;
+            --text-muted: #6B7280;
 
-            --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-            --shadow-hover: 0 10px 25px -5px rgba(59, 130, 246, 0.18);
+            --accent-green: #10B981;
+            --accent-blue: #3B82F6;
+            --accent-cyan: #06B6D4;
+
+            --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+            --shadow-dock: 0 10px 30px rgba(0, 0, 0, 0.5);
 
             --radius-sm: 6px;
             --radius-md: 10px;
             --radius-lg: 16px;
-            --radius-xl: 24px;
             --radius-full: 9999px;
 
-            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="light"] {
+            /* Light Theme Tokens */
+            --bg-primary: #FAFAFC;
+            --bg-secondary: #F3F4F6;
+            --bg-card: #FFFFFF;
+            --bg-card-hover: #F8FAFC;
+            --bg-dock: rgba(255, 255, 255, 0.85);
+            --border-color: #E5E7EB;
+            --border-hover: #2563EB;
+
+            --text-primary: #111827;
+            --text-secondary: #4B5563;
+            --text-muted: #9CA3AF;
+
+            --accent-green: #059669;
+            --accent-blue: #2563EB;
+            --accent-cyan: #0891B2;
+
+            --shadow-card: 0 4px 15px rgba(0, 0, 0, 0.05);
+            --shadow-dock: 0 10px 30px rgba(0, 0, 0, 0.12);
         }
 
         * {
@@ -92,268 +91,378 @@
         }
 
         body {
-            overflow-x: hidden;
-            position: relative;
             line-height: 1.6;
             background: var(--bg-primary);
-        }
-
-        /* Subtle Depth Background Overlay Grid */
-        .grid-texture {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-            background-size: 32px 32px;
-            pointer-events: none;
-            z-index: -2;
-            opacity: 0.5;
-        }
-
-        /* Faint Lighting Glow */
-        .ambient-glow {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: var(--gradient-bg-radial);
-            pointer-events: none;
-            z-index: -1;
+            color: var(--text-primary);
+            padding-bottom: 7rem;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 820px;
             margin: 0 auto;
             padding: 0 1.5rem;
         }
 
-        /* Card Surface */
-        .card-surface {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-card);
-            transition: var(--transition);
-        }
-
-        .gradient-text {
-            background: var(--gradient-accent);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3.5rem;
-        }
-
-        .section-subtitle {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            color: var(--accent-secondary);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-            margin-bottom: 0.6rem;
-            display: inline-block;
-            padding: 0.3rem 0.9rem;
-            background: rgba(34, 211, 238, 0.08);
-            border-radius: var(--radius-full);
-            border: 1px solid rgba(34, 211, 238, 0.2);
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            color: var(--text-primary);
-        }
-
-        /* Sticky Navigation Bar */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 1.1rem 0;
-            background: rgba(8, 11, 20, 0.80);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-
-        .nav-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-weight: 800;
-            font-size: 1.35rem;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            color: var(--text-primary);
-        }
-
-        .logo-box {
-            width: 36px;
-            height: 36px;
-            background: var(--accent-primary);
-            border-radius: var(--radius-sm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-            font-weight: 800;
-            font-size: 1.1rem;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-weight: 500;
-            font-size: 0.92rem;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-secondary);
-        }
-
-        .nav-links a.active {
-            color: var(--accent-primary);
-            font-weight: 600;
-        }
-
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .nav-resume-btn {
-            padding: 0.55rem 1.1rem;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border-radius: var(--radius-md);
-            background: var(--accent-primary);
-            color: var(--text-primary);
-            text-decoration: none;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .nav-resume-btn:hover {
-            background: var(--accent-primary-hover);
-        }
-
-        .mobile-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text-primary);
-            font-size: 1.4rem;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
+        /* Top Header / Hero Section */
         .hero {
-            min-height: 90vh;
-            padding-top: 8.5rem;
-            padding-bottom: 4rem;
+            padding-top: 5rem;
+            padding-bottom: 3.5rem;
+        }
+
+        .hero-flex {
             display: flex;
-            align-items: center;
-            position: relative;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 2rem;
         }
 
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.25fr 0.75fr;
-            gap: 3.5rem;
-            align-items: center;
+        .hero-info {
+            flex: 1;
         }
 
-        .hero-badge {
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            line-height: 1.1;
+        }
+
+        .status-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.6rem;
-            padding: 0.45rem 1.1rem;
-            background: rgba(34, 211, 238, 0.08);
-            border: 1px solid rgba(34, 211, 238, 0.2);
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--accent-green);
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            padding: 0.3rem 0.85rem;
             border-radius: var(--radius-full);
-            font-size: 0.82rem;
-            font-weight: 600;
-            color: var(--accent-secondary);
             margin-bottom: 1.25rem;
         }
 
         .status-dot {
             width: 8px;
             height: 8px;
-            background-color: var(--accent-success);
+            background-color: var(--accent-green);
             border-radius: 50%;
-            box-shadow: 0 0 8px var(--accent-success);
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.15;
-            margin-bottom: 1rem;
-            letter-spacing: -0.03em;
-            color: var(--text-primary);
+            display: inline-block;
+            box-shadow: 0 0 8px var(--accent-green);
         }
 
         .hero-subtitle {
-            font-size: 1.2rem;
-            font-weight: 600;
+            font-size: 1.12rem;
             color: var(--text-secondary);
-            margin-bottom: 1.25rem;
+            font-weight: 500;
+            line-height: 1.6;
+            max-width: 620px;
+        }
+
+        /* Avatar styling inspired by reference */
+        .hero-avatar-container {
+            flex-shrink: 0;
+        }
+
+        .hero-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            border: 2px solid var(--border-color);
+            box-shadow: var(--shadow-card);
+            transition: var(--transition);
+        }
+
+        .hero-avatar:hover {
+            border-color: var(--accent-blue);
+            transform: scale(1.03);
+        }
+
+        /* Section Demarcations */
+        section {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-header-title {
             font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
         }
 
-        .hero-description {
-            font-size: 1.05rem;
+        /* About Section */
+        .about-text {
+            font-size: 1.02rem;
             color: var(--text-secondary);
-            margin-bottom: 2rem;
-            line-height: 1.7;
-            max-width: 640px;
+            line-height: 1.75;
         }
 
-        .hero-actions {
+        .about-text strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .about-text a {
+            color: var(--text-primary);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: var(--transition);
+        }
+
+        .about-text a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Experience Section */
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .experience-item {
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+        }
+
+        .company-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-md);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--accent-blue);
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+        }
+
+        .experience-details {
+            flex: 1;
+        }
+
+        .experience-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .company-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .role-title {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+
+        .experience-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        .experience-bullets {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-bullets li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .experience-bullets li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .experience-bullets li strong {
+            color: var(--text-primary);
+        }
+
+        /* Projects Section */
+        .projects-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow-card);
+        }
+
+        .project-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .project-subtitle {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--accent-cyan);
+            margin-bottom: 0.75rem;
+        }
+
+        .project-description {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.65rem;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+        }
+
+        .project-links {
             display: flex;
             align-items: center;
             gap: 1.25rem;
+        }
+
+        .project-link {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: var(--transition);
+        }
+
+        .project-link:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .skill-group {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.25rem;
+        }
+
+        .skill-group-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-group-title i {
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .contact-intro {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-intro h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-intro p {
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+        }
+
+        .contact-quick-links {
+            display: flex;
             flex-wrap: wrap;
-            margin-bottom: 2rem;
+            gap: 0.75rem;
+            margin-bottom: 1.75rem;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.6rem;
-            padding: 0.85rem 1.75rem;
+            gap: 0.5rem;
+            padding: 0.6rem 1.25rem;
             border-radius: var(--radius-md);
+            font-size: 0.9rem;
             font-weight: 600;
-            font-size: 0.95rem;
             text-decoration: none;
             transition: var(--transition);
             cursor: pointer;
@@ -361,1222 +470,480 @@
         }
 
         .btn-primary {
-            background: var(--accent-primary);
-            color: var(--text-primary);
+            background: var(--accent-blue);
+            color: #ffffff;
         }
 
         .btn-primary:hover {
-            background: var(--accent-primary-hover);
-            transform: translateY(-2px);
+            opacity: 0.9;
+            transform: translateY(-1px);
         }
 
         .btn-secondary {
-            background: transparent;
+            background: var(--bg-secondary);
             color: var(--text-primary);
             border-color: var(--border-color);
         }
 
         .btn-secondary:hover {
-            background: var(--bg-card);
             border-color: var(--text-secondary);
-            transform: translateY(-2px);
-        }
-
-        .hero-socials {
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-        }
-
-        .hero-social-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.45rem;
-            color: var(--text-secondary);
-            font-size: 0.92rem;
-            font-weight: 500;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .hero-social-link:hover {
-            color: var(--accent-primary);
-        }
-
-        /* Executive Hero Profile Portrait Card */
-        .hero-visual {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-portrait-card {
-            position: relative;
-            width: 320px;
-            height: 380px;
-            border-radius: var(--radius-xl);
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-card);
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .hero-portrait-card:hover {
-            border-color: var(--accent-primary);
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .hero-portrait-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center top;
-            transition: transform 0.4s ease;
-        }
-
-        .hero-portrait-card:hover img {
-            transform: scale(1.03);
-        }
-
-        .portrait-card-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 1.25rem;
-            background: linear-gradient(180deg, transparent 0%, rgba(8, 11, 20, 0.95) 100%);
-            display: flex;
-            flex-direction: column;
-            gap: 0.2rem;
-        }
-
-        .portrait-name {
-            font-size: 1.15rem;
-            font-weight: 800;
-            color: var(--text-primary);
-        }
-
-        .portrait-role {
-            font-size: 0.85rem;
-            color: var(--accent-secondary);
-            font-weight: 500;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        /* About / Summary Section */
-        .about-section {
-            padding: 5rem 0;
-            background: var(--bg-secondary);
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-text h2 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 1.25rem;
-            color: var(--text-primary);
-        }
-
-        .about-text p {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            line-height: 1.75;
-            margin-bottom: 1.5rem;
-        }
-
-        .about-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-        }
-
-        .about-badge-item {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            padding: 0.35rem 0.8rem;
-            background: var(--bg-primary);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            color: var(--accent-secondary);
-            font-weight: 500;
-        }
-
-        /* Experience Timeline Section */
-        .experience-section {
-            padding: 6rem 0;
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 28px;
-            width: 2px;
-            background: var(--border-color);
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 80px;
-            margin-bottom: 3rem;
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .timeline-marker {
-            position: absolute;
-            left: 17px;
-            top: 0;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--bg-primary);
-            border: 3px solid var(--accent-primary);
-            z-index: 2;
-        }
-
-        .timeline-content {
-            padding: 2rem;
-        }
-
-        .timeline-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .role-title {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-
-        .company-name {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--accent-secondary);
-            margin-top: 0.2rem;
-        }
-
-        .experience-date {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            padding: 0.3rem 0.75rem;
-            background: var(--bg-secondary);
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--border-color);
-        }
-
-        .experience-highlights {
-            list-style: none;
-            margin-top: 1rem;
-        }
-
-        .experience-highlights li {
-            position: relative;
-            padding-left: 1.4rem;
-            margin-bottom: 0.8rem;
-            color: var(--text-secondary);
-            font-size: 0.96rem;
-            line-height: 1.65;
-        }
-
-        .experience-highlights li::before {
-            content: '▪';
-            position: absolute;
-            left: 0;
-            color: var(--accent-primary);
-            font-size: 1.1rem;
-        }
-
-        /* Projects Section */
-        .projects-section {
-            padding: 6rem 0;
-            background: var(--bg-secondary);
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .project-card {
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            height: 100%;
-            position: relative;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent-primary);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .project-card-header {
-            padding: 1.75rem;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .project-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-
-        .project-problem {
-            font-size: 0.9rem;
-            color: var(--accent-secondary);
-            font-weight: 500;
-            margin-bottom: 0.85rem;
-            line-height: 1.5;
-        }
-
-        .project-built {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 1.25rem;
-        }
-
-        /* Technical Badges (Engineering Metadata) */
-        .project-tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .tech-tag {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.78rem;
-            padding: 0.3rem 0.7rem;
-            background: var(--bg-secondary);
-            color: var(--text-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-        }
-
-        /* Expandable Accordion Toggle for Technical Details */
-        .details-toggle-btn {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            width: 100%;
-            padding: 0.7rem 1rem;
-            font-size: 0.85rem;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: var(--transition);
-            border-radius: var(--radius-sm);
-            margin-bottom: 1rem;
-        }
-
-        .details-toggle-btn:hover {
-            border-color: var(--accent-primary);
-            color: var(--accent-primary);
-        }
-
-        .details-toggle-btn i {
-            transition: transform 0.3s ease;
-        }
-
-        .details-toggle-btn.open i {
-            transform: rotate(180deg);
-        }
-
-        .project-expandable-details {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
-            background: var(--bg-primary);
-            border-radius: var(--radius-sm);
-            margin-bottom: 1rem;
-            padding: 0 1rem;
-        }
-
-        .project-expandable-details.open {
-            max-height: 500px;
-            padding: 1rem;
-            transition: max-height 0.4s cubic-bezier(1, 0, 1, 0);
-            border: 1px solid var(--border-color);
-        }
-
-        .arch-highlights-list {
-            list-style: none;
-        }
-
-        .arch-highlights-list li {
-            position: relative;
-            padding-left: 1.2rem;
-            margin-bottom: 0.6rem;
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            line-height: 1.55;
-        }
-
-        .arch-highlights-list li::before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: var(--accent-primary);
-            font-weight: bold;
-        }
-
-        .project-links {
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-            margin-top: auto;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .project-link-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.45rem;
-            font-size: 0.88rem;
-            font-weight: 600;
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .project-link-btn:hover {
-            color: var(--accent-primary);
-        }
-
-        /* Tech Stack Section */
-        .skills-section {
-            padding: 6rem 0;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-card {
-            padding: 2rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            transition: var(--transition);
-        }
-
-        .skill-card:hover {
-            border-color: var(--accent-primary);
-        }
-
-        .skill-card h3 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 1.1rem;
-            color: var(--text-primary);
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .skill-card h3 i {
-            color: var(--accent-primary);
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 6rem 0;
-            background: var(--bg-secondary);
-            border-top: 1px solid var(--border-color);
-        }
-
-        .contact-card {
-            padding: 4rem 2rem;
-            text-align: center;
-            max-width: 720px;
-            margin: 0 auto;
-        }
-
-        .contact-title {
-            font-size: 2.75rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        .contact-subtitle {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            margin-bottom: 2.5rem;
-            line-height: 1.7;
-        }
-
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1.25rem;
-            flex-wrap: wrap;
-            margin-bottom: 2.5rem;
+            transform: translateY(-1px);
         }
 
         .contact-form {
-            max-width: 580px;
-            margin: 0 auto;
-            text-align: left;
             display: flex;
             flex-direction: column;
-            gap: 1.2rem;
+            gap: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
         }
 
         .form-group {
             display: flex;
             flex-direction: column;
-            gap: 0.45rem;
+            gap: 0.35rem;
         }
 
         .form-group label {
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             font-weight: 600;
             color: var(--text-secondary);
         }
 
         .form-control {
-            padding: 0.8rem 1rem;
+            padding: 0.7rem 0.9rem;
             background: var(--bg-primary);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-md);
             color: var(--text-primary);
             font-family: inherit;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             transition: var(--transition);
         }
 
         .form-control:focus {
             outline: none;
-            border-color: var(--accent-primary);
+            border-color: var(--accent-blue);
         }
 
         textarea.form-control {
             resize: vertical;
-            min-height: 120px;
+            min-height: 100px;
         }
 
         .form-status {
             display: none;
-            padding: 0.85rem;
+            padding: 0.75rem;
             border-radius: var(--radius-md);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             text-align: center;
             font-weight: 600;
         }
 
         .form-status.success {
             display: block;
-            background: rgba(52, 211, 153, 0.15);
-            color: var(--accent-success);
-            border: 1px solid rgba(52, 211, 153, 0.3);
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-green);
+            border: 1px solid rgba(16, 185, 129, 0.3);
         }
 
-        .form-status.error {
-            display: block;
-            background: rgba(239, 68, 68, 0.15);
-            color: #f87171;
-            border: 1px solid rgba(239, 68, 68, 0.3);
+        /* Floating Bottom Dock Toolbar (as in reference screenshot) */
+        .dock-container {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
         }
 
-        /* Footer */
-        footer {
-            padding: 2.5rem 0;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .footer-socials {
+        .dock {
             display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.75rem;
+            background: var(--bg-dock);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-full);
+            box-shadow: var(--shadow-dock);
+        }
+
+        .dock-item {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-socials a {
             color: var(--text-secondary);
-            font-size: 1.2rem;
+            text-decoration: none;
             transition: var(--transition);
+            font-size: 1.1rem;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            position: relative;
         }
 
-        .footer-socials a:hover {
-            color: var(--accent-primary);
+        .dock-item:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
         }
 
-        /* Responsive Breakpoints */
-        @media (max-width: 992px) {
-
-            .hero-grid,
-            .about-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-description,
-            .about-text {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero-actions,
-            .about-badges,
-            .hero-socials {
-                justify-content: center;
-            }
-
-            .hero-visual {
-                margin-top: 3rem;
-            }
+        [data-theme="light"] .dock-item:hover {
+            background: rgba(0, 0, 0, 0.06);
         }
 
-        @media (max-width: 768px) {
+        .dock-divider {
+            width: 1px;
+            height: 22px;
+            background: var(--border-color);
+            margin: 0 0.2rem;
+        }
+
+        /* Tooltip on Dock Hover */
+        .dock-item::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 48px;
+            left: 50%;
+            transform: translateX(-50%) scale(0.8);
+            opacity: 0;
+            pointer-events: none;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 0.25rem 0.6rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: var(--transition);
+            box-shadow: var(--shadow-card);
+        }
+
+        .dock-item:hover::after {
+            opacity: 1;
+            transform: translateX(-50%) scale(1);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 640px) {
+            .hero-flex {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                gap: 1.25rem;
+            }
+
             .hero-title {
-                font-size: 2.6rem;
+                font-size: 2.25rem;
             }
 
-            .section-title {
-                font-size: 2.1rem;
+            .hero-avatar {
+                width: 90px;
+                height: 90px;
             }
 
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--bg-glass-heavy);
-                backdrop-filter: blur(16px);
-                flex-direction: column;
-                padding: 1.5rem;
-                border-bottom: 1px solid var(--border-color);
+            .skills-grid {
+                grid-template-columns: 1fr;
             }
 
-            .nav-links.mobile-active {
-                display: flex;
+            .dock {
+                padding: 0.3rem 0.5rem;
+                gap: 0.2rem;
             }
 
-            .mobile-toggle {
-                display: block;
-            }
-
-            .timeline::before {
-                left: 14px;
-            }
-
-            .timeline-item {
-                padding-left: 55px;
-            }
-
-            .timeline-marker {
-                left: 0;
-                width: 24px;
-                height: 24px;
-            }
-        }
-
-        /* Reduced Motion Accessibility */
-        @media (prefers-reduced-motion: reduce) {
-
-            *,
-            ::before,
-            ::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
+            .dock-item {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- Subtle Depth Background & Faint Ambient Radial Glow -->
-    <div class="grid-texture"></div>
-    <div class="ambient-glow"></div>
 
-    <!-- Navigation Header -->
-    <nav id="navbar">
-        <div class="container nav-content">
-            <a href="#home" class="logo">
-                <div class="logo-box">R</div>
-                <span>Ritik Kumar Gupta</span>
-            </a>
+    <main class="container">
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <!-- Hero Section -->
+        <header class="hero" id="home">
+            <div class="hero-flex">
+                <div class="hero-info">
+                    <h1 class="hero-title">Hey, I'm Ritik</h1>
 
-            <div class="nav-actions">
-                <a href="Ritik_resume (1).pdf" download="Ritik_Kumar_Gupta_Resume.pdf" class="nav-resume-btn">
-                    <i class="fa-solid fa-file-arrow-down"></i> Download Resume
-                </a>
-                <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <div class="hero-badge">
+                    <div class="status-badge">
                         <span class="status-dot"></span>
-                        AI Engineer | Generative AI & Agentic Systems
+                        AI Engineer Intern @ Calsoft
                     </div>
-
-                    <h1 class="hero-title">
-                        AI Engineer Building <span class="gradient-text">Intelligent Systems</span>
-                    </h1>
 
                     <p class="hero-subtitle">
-                        Generative AI • LLM Applications • RAG • Agentic AI
+                        AI Engineer building multi-agent workflows, stateful RAG pipelines, and production Generative AI applications.
                     </p>
-
-                    <p class="hero-description">
-                        Hands-on AI Engineer with experience designing production-grade Generative AI applications, LLM
-                        systems, RAG pipelines, multi-agent workflows, and high-performance FastAPI REST APIs across
-                        model training, vector search, and cloud deployments.
-                    </p>
-
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">
-                            <i class="fa-solid fa-code"></i> View My Work
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <i class="fa-solid fa-paper-plane"></i> Let's Connect
-                        </a>
-                    </div>
-
-                    <div class="hero-socials">
-                        <a href="https://github.com/ritik-gupta001" target="_blank" rel="noopener"
-                            class="hero-social-link">
-                            <i class="fa-brands fa-github"></i> GitHub
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="hero-social-link">
-                            <i class="fa-brands fa-linkedin"></i> LinkedIn
-                        </a>
-                        <a href="mailto:ritikgupta78560@gmail.com" class="hero-social-link">
-                            <i class="fa-solid fa-envelope"></i> Email
-                        </a>
-                    </div>
                 </div>
 
-                <!-- Executive Developer Portrait Card (Pipeline box removed) -->
-                <div class="hero-visual">
-                    <div class="hero-portrait-card">
-                        <img src="Ritik.jpeg" alt="Ritik Kumar Gupta - AI Engineer" onerror="this.src='Ritik.jpg';">
-                        <div class="portrait-card-overlay">
-                            <span class="portrait-name">Ritik Kumar Gupta</span>
-                            <span class="portrait-role"><i class="fa-solid fa-code"></i> AI Engineer</span>
-                        </div>
-                    </div>
+                <div class="hero-avatar-container">
+                    <img src="Ritik.jpeg" alt="Ritik Kumar Gupta" class="hero-avatar" onerror="this.src='Ritik.jpg';">
                 </div>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- About / Profile Summary Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <span class="section-subtitle">Profile Overview</span>
-                    <h2>Engineered for Production Impact</h2>
-                    <p>
-                        AI Engineer with nearly 1 year of hands-on experience developing end-to-end Generative AI
-                        applications and multi-agent workflows. Skilled in stateful RAG pipelines using
-                        <strong>LangChain</strong> and <strong>LangGraph</strong>, production-grade
-                        <strong>FastAPI</strong> microservices, vector search optimization, and model training with
-                        <strong>PyTorch</strong> & <strong>TensorFlow</strong>.
-                    </p>
-                    <div class="about-badges">
-                        <span class="about-badge-item">Generative AI</span>
-                        <span class="about-badge-item">LLM Applications</span>
-                        <span class="about-badge-item">RAG Pipelines</span>
-                        <span class="about-badge-item">Agentic AI</span>
-                        <span class="about-badge-item">LangChain & LangGraph</span>
-                        <span class="about-badge-item">FastAPI & Python</span>
-                    </div>
-                </div>
-
-                <div class="card-surface" style="padding: 2rem;">
-                    <h3 style="font-size: 1.15rem; color: var(--accent-primary); margin-bottom: 1rem;"><i
-                            class="fa-solid fa-microchip"></i> Core Competencies Summary</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65;">
-                        • <strong>Multi-Agent Systems:</strong> LangGraph orchestration with Human-in-the-Loop approval
-                        checkpoints & rollback handling.<br><br>
-                        • <strong>Advanced RAG:</strong> Self-correcting retrieval, document reranking, hybrid search
-                        (ChromaDB + BM25 + RRF), and SSE streaming.<br><br>
-                        • <strong>Production Backend:</strong> Scalable FastAPI microservices, FastMCP tools
-                        integration, and containerized Docker deployments.
-                    </p>
-                </div>
+        <!-- About Section -->
+        <section id="about">
+            <h2 class="section-header-title">ABOUT</h2>
+            <div class="about-text">
+                <p>
+                    I'm an AI Engineer currently interning at <strong>Calsoft Pvt. Ltd.</strong>, where I work on architecting multi-agent systems and production-grade Generative AI pipelines — including <strong>VMExit</strong> (automated VMware-to-OpenStack cloud migration with LangGraph Human-in-the-Loop workflows) and <strong>CalRetail</strong> (AI platform for retail operations across 5,000+ SKUs). My core strengths lie in Generative AI engineering — designing stateful systems with <strong>Python</strong>, <strong>FastAPI</strong>, <strong>LangChain</strong>, <strong>LangGraph</strong>, <strong>PyTorch</strong>, and <strong>ChromaDB</strong>. Previously at <strong>ConstemsAI</strong>, I resolved product catalog indexing defects and restored automated ETL validation pipelines. Outside work, I build open-source <a href="#projects">AI projects</a> across healthcare, adaptive retrieval, and FastMCP agentic tools.
+                </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Work Experience Section -->
-    <section id="experience" class="experience-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Track Record</span>
-                <h2 class="section-title">Work Experience</h2>
-            </div>
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2 class="section-header-title">EXPERIENCE</h2>
 
-            <div class="timeline">
+            <div class="experience-list">
                 <!-- Calsoft Pvt. Ltd. -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="card-surface timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3 class="role-title">AI Engineer Intern</h3>
-                                <div class="company-name">Calsoft Pvt. Ltd.</div>
-                            </div>
+                <div class="experience-item">
+                    <div class="company-icon">C</div>
+                    <div class="experience-details">
+                        <div class="experience-top">
+                            <h3 class="company-name">Calsoft Pvt. Ltd.</h3>
                             <span class="experience-date">Mar 2026 – Aug 2026</span>
                         </div>
-                        <ul class="experience-highlights">
-                            <li>Architected <strong>VMExit</strong> – automated VMware-to-OpenStack cloud migration
-                                system using <strong>LangGraph</strong> multi-agent orchestration featuring
-                                Human-in-the-Loop (HITL) approval checkpoints and rollback handling.</li>
-                            <li>Engineered <strong>CalRetail </strong> – production AI platform for retail operations
-                                implementing demand forecasting, dynamic pricing, personalized recommendations, and
-                                GenAI customer assistance across <strong>5,000+ SKUs</strong>.</li>
-                            <li>Designed a <strong>LangGraph + LangChain RAG</strong> application integrating semantic
-                                vector search, structured product metadata, and LLM orchestration to deliver
-                                context-aware customer assistance.</li>
+                        <div class="role-title">AI Engineer Intern</div>
+                        <ul class="experience-highlights experience-bullets">
+                            <li>Architected <strong>VMExit</strong> – automated VMware-to-OpenStack cloud migration system using <strong>LangGraph</strong> multi-agent orchestration featuring Human-in-the-Loop (HITL) approval checkpoints and rollback handling.</li>
+                            <li>Engineered <strong>CalRetail</strong> – production AI platform for retail operations implementing demand forecasting, dynamic pricing, personalized recommendations, and GenAI customer assistance across <strong>5,000+ SKUs</strong>.</li>
+                            <li>Designed a <strong>LangGraph + LangChain RAG</strong> application integrating semantic vector search, structured product metadata, and LLM orchestration to deliver context-aware customer assistance.</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- ConstemsAI -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="card-surface timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3 class="role-title">AI Engineer Intern</h3>
-                                <div class="company-name">ConstemsAI</div>
-                            </div>
+                <div class="experience-item">
+                    <div class="company-icon">C</div>
+                    <div class="experience-details">
+                        <div class="experience-top">
+                            <h3 class="company-name">ConstemsAI</h3>
                             <span class="experience-date">Dec 2025 – Feb 2026</span>
                         </div>
-                        <ul class="experience-highlights">
-                            <li>Audited and corrected SKU-to-shelf mappings across the Thailand product catalog,
-                                resolving HID (Horizontal Indexing Defect) issues and restoring accurate product
-                                indexing.</li>
-                            <li>Developed automated data validation and cleaning pipelines to detect missing, duplicate,
-                                and corrupted records across large-scale retail datasets.</li>
-                            <li>Restored and validated end-to-end ETL pipelines for the Philippines product catalog,
-                                ensuring reliable downstream data processing and production data availability.</li>
+                        <div class="role-title">AI Engineer Intern</div>
+                        <ul class="experience-highlights experience-bullets">
+                            <li>Audited and corrected SKU-to-shelf mappings across the Thailand product catalog, resolving HID (Horizontal Indexing Defect) issues and restoring accurate product indexing.</li>
+                            <li>Developed automated data validation and cleaning pipelines to detect missing, duplicate, and corrupted records across large-scale retail datasets.</li>
+                            <li>Restored and validated end-to-end ETL pipelines for the Philippines product catalog, ensuring reliable downstream data processing and production data availability.</li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section with Expandable Technical Details -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Proof of Work</span>
-                <h2 class="section-title">Featured Projects</h2>
-            </div>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="section-header-title">PROJECTS</h2>
 
-            <div class="projects-grid">
-                <!-- Project 1: Health O.K -->
+            <div class="projects-list">
+                <!-- Health O.K -->
                 <div class="project-card">
-                    <div class="project-card-header">
+                    <div class="project-header">
                         <h3 class="project-title">Health O.K</h3>
-                        <div class="project-problem">Multi-Agent AI Healthcare Assistant</div>
-                        <div class="project-built">
-                            Full-stack healthcare assistant utilizing multi-agent orchestration, safety screening,
-                            citation-grounded RAG, and automated PII redaction.
-                        </div>
-                        <div class="project-tech-stack">
-                            <span class="tech-tag">LangGraph</span>
-                            <span class="tech-tag">LangChain</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">ChromaDB</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Docker</span>
-                        </div>
-
-                        <!-- Expandable Architecture Details Toggle -->
-                        <button class="details-toggle-btn" onclick="toggleDetails(this)">
-                            <span><i class="fa-solid fa-layer-group"></i> Expand Technical Architecture</span>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        <div class="project-expandable-details">
-                            <ul class="arch-highlights-list">
-                                <li>Architected multi-agent system using LangGraph with safety screening, long-term
-                                    memory, output validation, and jailbreak prevention.</li>
-                                <li>Implemented active prompt injection detection and automated PII redaction before
-                                    vector storage.</li>
-                                <li>Integrated citation-grounded RAG with ChromaDB, JWT authentication, and automated
-                                    CI/CD Docker builds.</li>
-                            </ul>
-                        </div>
-
-                        <div class="project-links">
-                            <a href="https://github.com/ritik-gupta001/Health_OK" target="_blank" rel="noopener"
-                                class="project-link-btn">
-                                <i class="fa-brands fa-github"></i> GitHub Code
-                            </a>
-                            <a href="https://healthok-frontend.onrender.com/chat" target="_blank" rel="noopener"
-                                class="project-link-btn" style="color: var(--accent-secondary);">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-                            </a>
-                        </div>
+                    </div>
+                    <div class="project-subtitle">Multi-Agent AI Healthcare Assistant</div>
+                    <p class="project-description">
+                        Full-stack healthcare assistant utilizing multi-agent orchestration, safety screening, citation-grounded RAG, and automated PII redaction.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">LangGraph</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">ChromaDB</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ritik-gupta001/Health_OK" target="_blank" rel="noopener" class="project-link">
+                            <i class="fa-brands fa-github"></i> GitHub Code
+                        </a>
+                        <a href="https://healthok-frontend.onrender.com/chat" target="_blank" rel="noopener" class="project-link" style="color: var(--accent-cyan);">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 2: Adaptive Retrieval Intelligence (ARI) -->
+                <!-- Adaptive Retrieval Intelligence (ARI) -->
                 <div class="project-card">
-                    <div class="project-card-header">
+                    <div class="project-header">
                         <h3 class="project-title">Adaptive Retrieval Intelligence (ARI)</h3>
-                        <div class="project-problem">Stateful Self-Correcting RAG System</div>
-                        <div class="project-built">
-                            Stateful RAG engine built on LangGraph featuring self-correcting loops for document
-                            reranking, self-reflection, and recursive query expansion.
-                        </div>
-                        <div class="project-tech-stack">
-                            <span class="tech-tag">LangGraph</span>
-                            <span class="tech-tag">LangChain</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">ChromaDB</span>
-                            <span class="tech-tag">Netlify</span>
-                            <span class="tech-tag">Pydantic</span>
-                        </div>
-
-                        <!-- Expandable Architecture Details Toggle -->
-                        <button class="details-toggle-btn" onclick="toggleDetails(this)">
-                            <span><i class="fa-solid fa-layer-group"></i> Expand Technical Architecture</span>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        <div class="project-expandable-details">
-                            <ul class="arch-highlights-list">
-                                <li>Built self-correcting RAG loops in LangGraph for automated document relevance
-                                    reranking and recursive query expansion.</li>
-                                <li>Implemented hybrid retrieval combining ChromaDB vector search with BM25 keyword
-                                    search and Reciprocal Rank Fusion (RRF).</li>
-                                <li>Exposed SSE streaming endpoints on FastAPI publishing real-time node outputs and
-                                    pipeline logs.</li>
-                            </ul>
-                        </div>
-
-                        <div class="project-links">
-                            <a href="https://github.com/ritik-gupta001/Adaptive-Retrieval-Intelligence-ARI-" target="_blank" rel="noopener"
-                                class="project-link-btn">
-                                <i class="fa-brands fa-github"></i> GitHub Code
-                            </a>
-                            <a href="https://ari-retrieval.netlify.app/" target="_blank" rel="noopener"
-                                class="project-link-btn" style="color: var(--accent-secondary);">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-                            </a>
-                        </div>
+                    </div>
+                    <div class="project-subtitle">Stateful Self-Correcting RAG System</div>
+                    <p class="project-description">
+                        Stateful RAG engine built on LangGraph featuring self-correcting loops for document reranking, self-reflection, and recursive query expansion.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">LangGraph</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">ChromaDB</span>
+                        <span class="tech-tag">Pydantic</span>
+                        <span class="tech-tag">Netlify</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ritik-gupta001/Adaptive-Retrieval-Intelligence-ARI-" target="_blank" rel="noopener" class="project-link">
+                            <i class="fa-brands fa-github"></i> GitHub Code
+                        </a>
+                        <a href="https://ari-retrieval.netlify.app/" target="_blank" rel="noopener" class="project-link" style="color: var(--accent-cyan);">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 3: EduBlink -->
+                <!-- EduBlink 2.0 -->
                 <div class="project-card">
-                    <div class="project-card-header">
-                        <h3 class="project-title">EduBlink</h3>
-                        <div class="project-problem">Full-Stack AI Learning Platform & FastMCP Agent</div>
-                        <div class="project-built">
-                            Full-stack AI platform generating 10+ classroom resources under 3 seconds using a 4-stage
-                            Course Builder Agent and FastMCP tools.
-                        </div>
-                        <div class="project-tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">FastMCP</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">OpenAI API</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">SQLModel</span>
-                        </div>
-
-                        <!-- Expandable Architecture Details Toggle -->
-                        <button class="details-toggle-btn" onclick="toggleDetails(this)">
-                            <span><i class="fa-solid fa-layer-group"></i> Expand Technical Architecture</span>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        <div class="project-expandable-details">
-                            <ul class="arch-highlights-list">
-                                <li>Generates 10+ classroom resources (MCQs, worksheets, code snippets, lesson plans) in
-                                    under 3 seconds.</li>
-                                <li>Engineered a multi-step Course Builder Agent chaining LLMs across 4 sequential
-                                    stages with SSE streaming.</li>
-                                <li>Integrated Model Context Protocol (FastMCP) exposing 10 custom tools directly to
-                                    Claude Desktop.</li>
-                            </ul>
-                        </div>
-
-                        <div class="project-links">
-                            <a href="https://github.com/ritik-gupta001/EduBlink-2.0"
-                                target="_blank" rel="noopener" class="project-link-btn">
-                                <i class="fa-brands fa-github"></i> GitHub Code
-                            </a>
-                            <a href="https://edublink-2-0.onrender.com/" target="_blank" rel="noopener"
-                                class="project-link-btn" style="color: var(--accent-secondary);">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-                            </a>
-                        </div>
+                    <div class="project-header">
+                        <h3 class="project-title">EduBlink 2.0</h3>
+                    </div>
+                    <div class="project-subtitle">Full-Stack AI Learning Platform & FastMCP Agent</div>
+                    <p class="project-description">
+                        Full-stack AI platform generating 10+ classroom resources under 3 seconds using a 4-stage Course Builder Agent and FastMCP tools.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">FastMCP</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">OpenAI API</span>
+                        <span class="tech-tag">React</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ritik-gupta001/EduBlink-2.0" target="_blank" rel="noopener" class="project-link">
+                            <i class="fa-brands fa-github"></i> GitHub Code
+                        </a>
+                        <a href="https://edublink-2-0.onrender.com/" target="_blank" rel="noopener" class="project-link" style="color: var(--accent-cyan);">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 4: VitaScan AI -->
+                <!-- VitaScan AI -->
                 <div class="project-card">
-                    <div class="project-card-header">
+                    <div class="project-header">
                         <h3 class="project-title">VitaScan AI</h3>
-                        <div class="project-problem">Medical Report Analysis & Health Risk Categorization</div>
-                        <div class="project-built">
-                            Full-stack medical report analyzer analyzing 500+ PDF reports with 95% metric extraction
-                            accuracy.
-                        </div>
-                        <div class="project-tech-stack">
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">LangGraph</span>
-                            <span class="tech-tag">OpenAI API</span>
-                            <span class="tech-tag">PyPDF2</span>
-                        </div>
-
-                        <!-- Expandable Architecture Details Toggle -->
-                        <button class="details-toggle-btn" onclick="toggleDetails(this)">
-                            <span><i class="fa-solid fa-layer-group"></i> Expand Technical Architecture</span>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        <div class="project-expandable-details">
-                            <ul class="arch-highlights-list">
-                                <li>Extracted key health metrics across 500+ reports with 95% accuracy using PyPDF2 &
-                                    FastAPI.</li>
-                                <li>Implemented risk assessment engine using LangGraph workflows to evaluate 8 health
-                                    categories.</li>
-                                <li>Integrated interactive conversational AI interpreter to explain clinical findings
-                                    clearly.</li>
-                            </ul>
-                        </div>
-
-                        <div class="project-links">
-                            <a href="https://github.com/ritik-gupta001/Major-Project-2026" target="_blank"
-                                rel="noopener" class="project-link-btn">
-                                <i class="fa-brands fa-github"></i> GitHub Code
-                            </a>
-                            <a href="https://vitascanai.netlify.app/" target="_blank" rel="noopener"
-                                class="project-link-btn" style="color: var(--accent-secondary);">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-                            </a>
-                        </div>
+                    </div>
+                    <div class="project-subtitle">Medical Report Analysis & Health Risk Categorization</div>
+                    <p class="project-description">
+                        Full-stack medical report analyzer analyzing 500+ PDF reports with 95% metric extraction accuracy using PyPDF2, FastAPI, and LangGraph.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">LangGraph</span>
+                        <span class="tech-tag">OpenAI API</span>
+                        <span class="tech-tag">PyPDF2</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ritik-gupta001/Major-Project-2026" target="_blank" rel="noopener" class="project-link">
+                            <i class="fa-brands fa-github"></i> GitHub Code
+                        </a>
+                        <a href="https://vitascanai.netlify.app/" target="_blank" rel="noopener" class="project-link" style="color: var(--accent-cyan);">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 5: NexAnalyze AI -->
+                <!-- NexAnalyze AI -->
                 <div class="project-card">
-                    <div class="project-card-header">
+                    <div class="project-header">
                         <h3 class="project-title">NexAnalyze AI</h3>
-                        <div class="project-problem">Autonomous Research & Data Analysis Platform</div>
-                        <div class="project-built">
-                            Multi-agent research platform combining LLMs, Machine Learning, and tabular data processors
-                            for automated insights.
-                        </div>
-                        <div class="project-tech-stack">
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">LangChain</span>
-                            <span class="tech-tag">scikit-learn</span>
-                            <span class="tech-tag">PyTorch</span>
-                        </div>
-
-                        <!-- Expandable Architecture Details Toggle -->
-                        <button class="details-toggle-btn" onclick="toggleDetails(this)">
-                            <span><i class="fa-solid fa-layer-group"></i> Expand Technical Architecture</span>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        <div class="project-expandable-details">
-                            <ul class="arch-highlights-list">
-                                <li>Autonomous multi-agent architecture for automated statistical research and data
-                                    insights.</li>
-                                <li>Generates predictive analytical charts and statistical data summaries automatically.
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="project-links">
-                            <a href="https://github.com/ritik-gupta001/NexanalyzeAI--Transform-Data-Into-Insights"
-                                target="_blank" rel="noopener" class="project-link-btn">
-                                <i class="fa-brands fa-github"></i> GitHub Code
-                            </a>
-                            <a href="https://nexanalyzeai-transform-data-into-insights.onrender.com/" target="_blank"
-                                rel="noopener" class="project-link-btn" style="color: var(--accent-secondary);">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-                            </a>
-                        </div>
+                    </div>
+                    <div class="project-subtitle">Autonomous Research & Data Analysis Platform</div>
+                    <p class="project-description">
+                        Autonomous multi-agent research platform combining LLMs, Machine Learning models, and automated statistical data insight generators.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">scikit-learn</span>
+                        <span class="tech-tag">PyTorch</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ritik-gupta001/NexanalyzeAI--Transform-Data-Into-Insights" target="_blank" rel="noopener" class="project-link">
+                            <i class="fa-brands fa-github"></i> GitHub Code
+                        </a>
+                        <a href="https://nexanalyzeai-transform-data-into-insights.onrender.com/" target="_blank" rel="noopener" class="project-link" style="color: var(--accent-cyan);">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 6: YouTube Summarizer -->
+                <!-- YouTube Summarizer -->
                 <div class="project-card">
-                    <div class="project-card-header">
+                    <div class="project-header">
                         <h3 class="project-title">YouTube Video Summarizer</h3>
-                        <div class="project-problem">Automated Video Transcript Summarization</div>
-                        <div class="project-built">
-                            Full-stack web application extracting YouTube transcripts and outputting low-latency concise
-                            NLP summaries.
-                        </div>
-                        <div class="project-tech-stack">
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">Docker</span>
-                        </div>
-
-                        <!-- Expandable Architecture Details Toggle -->
-                        <button class="details-toggle-btn" onclick="toggleDetails(this)">
-                            <span><i class="fa-solid fa-layer-group"></i> Expand Technical Architecture</span>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        <div class="project-expandable-details">
-                            <ul class="arch-highlights-list">
-                                <li>Transcript extraction via API and NLP pipeline for high-accuracy summaries.</li>
-                                <li>Optimized FastAPI response pipeline for fast response times and scalable API
-                                    handling.</li>
-                            </ul>
-                        </div>
-
-                        <div class="project-links">
-                            <a href="https://github.com/ritik-gupta001/Youtube-Video-Summary-Generator" target="_blank"
-                                rel="noopener" class="project-link-btn">
-                                <i class="fa-brands fa-github"></i> GitHub Code
-                            </a>
-                            <a href="https://youtubevideosummarygenerator.netlify.app/" target="_blank" rel="noopener"
-                                class="project-link-btn" style="color: var(--accent-secondary);">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-                            </a>
-                        </div>
+                    </div>
+                    <div class="project-subtitle">Automated Video Transcript Summarization</div>
+                    <p class="project-description">
+                        Full-stack web application extracting YouTube transcripts and outputting low-latency concise NLP summaries.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ritik-gupta001/Youtube-Video-Summary-Generator" target="_blank" rel="noopener" class="project-link">
+                            <i class="fa-brands fa-github"></i> GitHub Code
+                        </a>
+                        <a href="https://youtubevideosummarygenerator.netlify.app/" target="_blank" rel="noopener" class="project-link" style="color: var(--accent-cyan);">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Technical Stack Section -->
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Skill Matrix</span>
-                <h2 class="section-title">Technical Stack</h2>
-            </div>
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2 class="section-header-title">SKILLS</h2>
 
             <div class="skills-grid">
-                <!-- Generative AI & LLMs -->
-                <div class="skill-card">
-                    <h3><i class="fa-solid fa-brain"></i> Generative AI & LLMs</h3>
-                    <div class="skill-tags">
+                <div class="skill-group">
+                    <div class="skill-group-title"><i class="fa-solid fa-brain"></i> Generative AI & Agentic Systems</div>
+                    <div class="tech-tags">
                         <span class="tech-tag">LangChain</span>
                         <span class="tech-tag">LangGraph</span>
                         <span class="tech-tag">RAG Pipelines</span>
-                        <span class="tech-tag">RAG Evals</span>
-                        <span class="tech-tag">LLM Evals</span>
                         <span class="tech-tag">Agentic AI</span>
                         <span class="tech-tag">Multi-Agent Systems</span>
-                        <span class="tech-tag">LLM Fine-tuning</span>
+                        <span class="tech-tag">FastMCP</span>
+                        <span class="tech-tag">LLM Evals</span>
                         <span class="tech-tag">Prompt Engineering</span>
-                        <span class="tech-tag">MCP (FastMCP)</span>
-                        <span class="tech-tag">OpenAI API</span>
                     </div>
                 </div>
 
-                <!-- ML / DL -->
-                <div class="skill-card">
-                    <h3><i class="fa-solid fa-diagram-project"></i> ML / DL</h3>
-                    <div class="skill-tags">
+                <div class="skill-group">
+                    <div class="skill-group-title"><i class="fa-solid fa-microchip"></i> ML & Deep Learning</div>
+                    <div class="tech-tags">
                         <span class="tech-tag">PyTorch</span>
                         <span class="tech-tag">TensorFlow</span>
                         <span class="tech-tag">Scikit-learn</span>
-                        <span class="tech-tag">XGBoost</span>
                         <span class="tech-tag">Transformers</span>
                         <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">XGBoost</span>
                     </div>
                 </div>
 
-                <!-- Backend -->
-                <div class="skill-card">
-                    <h3><i class="fa-solid fa-server"></i> Backend</h3>
-                    <div class="skill-tags">
+                <div class="skill-group">
+                    <div class="skill-group-title"><i class="fa-solid fa-server"></i> Backend & Vector Databases</div>
+                    <div class="tech-tags">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">FastAPI</span>
                         <span class="tech-tag">REST APIs</span>
-                    </div>
-                </div>
-
-                <!-- Databases -->
-                <div class="skill-card">
-                    <h3><i class="fa-solid fa-database"></i> Databases</h3>
-                    <div class="skill-tags">
                         <span class="tech-tag">PostgreSQL</span>
                         <span class="tech-tag">ChromaDB</span>
                         <span class="tech-tag">FAISS</span>
@@ -1584,113 +951,118 @@
                     </div>
                 </div>
 
-                <!-- Cloud / DevOps -->
-                <div class="skill-card">
-                    <h3><i class="fa-solid fa-cloud"></i> Cloud / DevOps</h3>
-                    <div class="skill-tags">
+                <div class="skill-group">
+                    <div class="skill-group-title"><i class="fa-solid fa-cloud"></i> Cloud, Tools & Frontend</div>
+                    <div class="tech-tags">
                         <span class="tech-tag">Docker</span>
                         <span class="tech-tag">GitHub Actions</span>
-                        <span class="tech-tag">Hugging Face</span>
                         <span class="tech-tag">Render</span>
                         <span class="tech-tag">Netlify</span>
-                    </div>
-                </div>
-
-                <!-- Frontend / Tools -->
-                <div class="skill-card">
-                    <h3><i class="fa-solid fa-code"></i> Frontend / Tools</h3>
-                    <div class="skill-tags">
                         <span class="tech-tag">LangSmith</span>
                         <span class="tech-tag">React.js</span>
-                        <span class="tech-tag">Streamlit</span>
-                        <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">NumPy</span>
-                        <span class="tech-tag">Git</span>
-                        <span class="tech-tag">GitHub</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="section-header-title">CONTACT</h2>
+
             <div class="contact-card">
-                <span class="section-subtitle">Get In Touch</span>
-                <h2 class="contact-title">Let's build something intelligent.</h2>
-                <p class="contact-subtitle">
-                    I am actively exploring AI Engineering, Generative AI, and Agentic Systems opportunities. Reach out
-                    via email or connect on LinkedIn!
-                </p>
+                <div class="contact-intro">
+                    <h3>Let's build something intelligent.</h3>
+                    <p>I am actively exploring AI Engineering, Generative AI, and Agentic Systems opportunities.</p>
+                </div>
 
-                <div class="contact-buttons">
+                <div class="contact-quick-links">
                     <a href="mailto:ritikgupta78560@gmail.com" class="btn btn-primary">
                         <i class="fa-solid fa-envelope"></i> ritikgupta78560@gmail.com
+                    </a>
+                    <a href="Ritik_resume (1).pdf" download="Ritik_Kumar_Gupta_Resume.pdf" class="btn btn-secondary">
+                        <i class="fa-solid fa-file-arrow-down"></i> Resume
+                    </a>
+                    <a href="https://github.com/ritik-gupta001" target="_blank" rel="noopener" class="btn btn-secondary">
+                        <i class="fa-brands fa-github"></i> GitHub
                     </a>
                     <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn btn-secondary">
                         <i class="fa-brands fa-linkedin"></i> LinkedIn
                     </a>
-                    <a href="https://github.com/ritik-gupta001" target="_blank" rel="noopener"
-                        class="btn btn-secondary">
-                        <i class="fa-brands fa-github"></i> GitHub
-                    </a>
                 </div>
 
-                <!-- Interactive Contact Form with Netlify Forms + FormSubmit Fallback -->
-                <form class="contact-form" id="contactForm" action="https://formsubmit.co/ritikgupta78560@gmail.com" method="POST" data-netlify="true" name="contact" onsubmit="handleFormSubmit(event)">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://ritik0001.netlify.app/?success=true#contact">
-                    <input type="hidden" name="_template" value="table">
-                    
+                <form class="contact-form" id="contactForm" action="https://formsubmit.co/ritikgupta78560@gmail.com" method="POST" onsubmit="handleFormSubmit(event)">
                     <div class="form-group">
-                        <label for="nameInput">Your Name</label>
-                        <input type="text" name="name" id="nameInput" class="form-control" placeholder="e.g. Hiring Manager"
-                            required>
+                        <label for="nameInput">Name</label>
+                        <input type="text" name="name" id="nameInput" class="form-control" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <label for="emailInput">Your Email</label>
-                        <input type="email" name="email" id="emailInput" class="form-control" placeholder="hiring@company.com"
-                            required>
+                        <label for="emailInput">Email</label>
+                        <input type="email" name="email" id="emailInput" class="form-control" placeholder="your@email.com" required>
                     </div>
                     <div class="form-group">
                         <label for="messageInput">Message</label>
-                        <textarea name="message" id="messageInput" class="form-control"
-                            placeholder="Let's connect regarding AI engineering opportunities..." required></textarea>
+                        <textarea name="message" id="messageInput" class="form-control" placeholder="Your message..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                    <button type="submit" class="btn btn-primary" style="justify-content: center; width: 100%; margin-top: 0.5rem;">
                         <i class="fa-solid fa-paper-plane"></i> Send Message
                     </button>
                     <div class="form-status" id="formStatus"></div>
                 </form>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-socials">
-                <a href="https://github.com/ritik-gupta001" target="_blank" rel="noopener" aria-label="GitHub"><i
-                        class="fa-brands fa-github"></i></a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i
-                        class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:ritikgupta78560@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-            <p>&copy; 2026 Ritik Kumar Gupta. All Rights Reserved.</p>
-        </div>
-    </footer>
+    </main>
 
-    <!-- Interactive Scripts & Navigation Logic -->
+    <!-- Floating Navigation Dock Toolbar (Inspired by Reference) -->
+    <div class="dock-container">
+        <nav class="dock">
+            <a href="#home" class="dock-item" data-tooltip="Home"><i class="fa-solid fa-house"></i></a>
+            <a href="#about" class="dock-item" data-tooltip="About"><i class="fa-solid fa-user"></i></a>
+            <a href="#experience" class="dock-item" data-tooltip="Experience"><i class="fa-solid fa-briefcase"></i></a>
+            <a href="#projects" class="dock-item" data-tooltip="Projects"><i class="fa-solid fa-code"></i></a>
+            <a href="#skills" class="dock-item" data-tooltip="Skills"><i class="fa-solid fa-layer-group"></i></a>
+            
+            <div class="dock-divider"></div>
+
+            <a href="https://github.com/ritik-gupta001" target="_blank" rel="noopener" class="dock-item" data-tooltip="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="dock-item" data-tooltip="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="Ritik_resume (1).pdf" download="Ritik_Kumar_Gupta_Resume.pdf" class="dock-item" data-tooltip="Download Resume"><i class="fa-solid fa-file-pdf"></i></a>
+
+            <div class="dock-divider"></div>
+
+            <button id="themeToggleBtn" class="dock-item" data-tooltip="Toggle Theme" aria-label="Toggle light and dark mode">
+                <i class="fa-solid fa-sun" id="themeIcon"></i>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Scripts -->
     <script>
-        // Expandable Architecture Accordion Toggle
-        function toggleDetails(btn) {
-            btn.classList.toggle('open');
-            const details = btn.nextElementSibling;
-            details.classList.toggle('open');
+        // Light & Dark Theme Toggle System
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        // Check local storage or system preference
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        setTheme(savedTheme);
+
+        function setTheme(theme) {
+            htmlElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            if (theme === 'light') {
+                themeIcon.className = 'fa-solid fa-moon';
+            } else {
+                themeIcon.className = 'fa-solid fa-sun';
+            }
         }
 
-        // Contact Form Submission Handler
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            setTheme(currentTheme === 'light' ? 'dark' : 'light');
+        });
+
+        // Contact Form AJAX Handler
         async function handleFormSubmit(e) {
             e.preventDefault();
             const form = e.target;
@@ -1717,7 +1089,7 @@
                         name: name,
                         email: email,
                         message: message,
-                        _subject: `New Portfolio Inquiry from ${name}`
+                        _subject: `Portfolio Inquiry from ${name}`
                     })
                 });
 
@@ -1725,52 +1097,18 @@
 
                 if (response.ok && data.success === "true") {
                     status.className = 'form-status success';
-                    status.innerHTML = '✓ Message sent successfully! I will get back to you shortly.';
+                    status.innerHTML = '✓ Message sent successfully!';
                     form.reset();
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
                 } else {
-                    // Fallback to direct HTML form submission
                     form.submit();
                 }
             } catch (err) {
-                // Fallback to direct HTML form submission
                 form.submit();
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
             }
         }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const navbar = document.getElementById('navbar');
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const navLinks = document.getElementById('navLinks');
-
-            // Mobile Navigation Toggle
-            mobileMenuBtn.addEventListener('click', () => {
-                navLinks.classList.toggle('mobile-active');
-            });
-
-            // Active Link Tracker on Scroll
-            const sections = document.querySelectorAll('section');
-            const navItems = document.querySelectorAll('.nav-links a');
-
-            window.addEventListener('scroll', () => {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    if (pageYOffset >= (sectionTop - 150)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-            // Check success query string on return from submission
-            if (window.location.search.includes('success=true')) {
-                const status = document.getElementById('formStatus');
-                if (status) {
-                    status.className = 'form-status success';
-                    status.innerHTML = '✓ Message sent successfully! I will get back to you shortly.';
-                }
-            }
-        });
     </script>
 </body>
 
